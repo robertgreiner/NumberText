@@ -1,0 +1,17 @@
+OPEN SOURCE PUBLIC LICENSE
+Version 1, October 2010
+
+http://www.ospl.ws
+
+Copyright (C) 2010 Robert Greiner
+robert@robertgreiner.com
+
+Everyone is permitted to copy and distribute verbatim or modified copies of this license document, and changing it is allowed as long as the name is changed.
+
+OPEN SOURCE PUBLIC LICENSE
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+0. The work released under this license can be used, modified, distributed, and/or released free of charge and royalty free.
+1. No attribution is required for any reason during the use of the work released under this license.
+2. There is no warranty provided for the work released under this license.
+3. The copyright holder and any modifier cannot be held liable for any damages occurred during the use of this work.
