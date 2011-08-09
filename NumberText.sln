@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberText", "NumberText\NumberText.csproj", "{8092CBE9-05B8-4671-A51F-3DB214F502FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberText.Tests", "NumberText.Tests\NumberText.Tests.csproj", "{3496AAEF-2C93-45B4-91C7-9C2ADBC57AFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8092CBE9-05B8-4671-A51F-3DB214F502FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8092CBE9-05B8-4671-A51F-3DB214F502FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8092CBE9-05B8-4671-A51F-3DB214F502FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8092CBE9-05B8-4671-A51F-3DB214F502FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3496AAEF-2C93-45B4-91C7-9C2ADBC57AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3496AAEF-2C93-45B4-91C7-9C2ADBC57AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3496AAEF-2C93-45B4-91C7-9C2ADBC57AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3496AAEF-2C93-45B4-91C7-9C2ADBC57AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
