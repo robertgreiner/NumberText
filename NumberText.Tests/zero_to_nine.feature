@@ -1,7 +1,13 @@
-﻿Feature: int to text
+﻿Feature: zero to nine
 	In order to display numbers in a user-friendly fashion
 	As a .NET developer
 	I want to be given the actual number value in text form of an integer
+
+
+Scenario: Return zero
+	Given I have an integer value of 0
+	When I get the text
+	Then the result should be zero
 
 Scenario: Return one
 	Given I have an integer value of 1

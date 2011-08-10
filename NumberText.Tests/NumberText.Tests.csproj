@@ -42,18 +42,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IntToText.cs" />
-    <Compile Include="int_to_text.feature.cs">
+    <Compile Include="ten_to_nineteen.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>int_to_text.feature</DependentUpon>
+      <DependentUpon>ten_to_nineteen.feature</DependentUpon>
+    </Compile>
+    <Compile Include="zero_to_nine.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zero_to_nine.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="int_to_text.feature">
+    <None Include="ten_to_nineteen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>int_to_text.feature.cs</LastGenOutput>
+      <LastGenOutput>ten_to_nineteen.feature.cs</LastGenOutput>
+    </None>
+    <None Include="zero_to_nine.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>zero_to_nine.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

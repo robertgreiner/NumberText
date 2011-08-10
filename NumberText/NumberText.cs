@@ -28,6 +28,16 @@ namespace NumberText {
             textStrings.Add(7, "seven");
             textStrings.Add(8, "eight");
             textStrings.Add(9, "nine");
+            textStrings.Add(10, "ten");
+            textStrings.Add(11, "eleven");
+            textStrings.Add(12, "twelve");
+            textStrings.Add(13, "thirteen");
+            textStrings.Add(14, "fourteen");
+            textStrings.Add(15, "fifteen");
+            textStrings.Add(16, "sixteen");
+            textStrings.Add(17, "seventeen");
+            textStrings.Add(18, "eighteen");
+            textStrings.Add(19, "nineteen");
         }
     }
 }

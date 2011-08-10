@@ -18,20 +18,20 @@ namespace NumberText.Tests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.6.1.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("int to text")]
-    public partial class IntToTextFeature
+    [NUnit.Framework.DescriptionAttribute("zero to nine")]
+    public partial class ZeroToNineFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "int_to_text.feature"
+#line 1 "zero_to_nine.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "int to text", "In order to display numbers in a user-friendly fashion\r\nAs a .NET developer\r\nI wa" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "zero to nine", "In order to display numbers in a user-friendly fashion\r\nAs a .NET developer\r\nI wa" +
                     "nt to be given the actual number value in text form of an integer", GenerationTargetLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
@@ -55,17 +55,34 @@ namespace NumberText.Tests
         }
         
         [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Return zero")]
+        public virtual void ReturnZero()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return zero", ((string[])(null)));
+#line 7
+this.ScenarioSetup(scenarioInfo);
+#line 8
+ testRunner.Given("I have an integer value of 0");
+#line 9
+ testRunner.When("I get the text");
+#line 10
+ testRunner.Then("the result should be zero");
+#line hidden
+            testRunner.CollectScenarioErrors();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Return one")]
         public virtual void ReturnOne()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return one", ((string[])(null)));
-#line 6
+#line 12
 this.ScenarioSetup(scenarioInfo);
-#line 7
+#line 13
  testRunner.Given("I have an integer value of 1");
-#line 8
+#line 14
  testRunner.When("I get the text");
-#line 9
+#line 15
  testRunner.Then("the result should be one");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -76,13 +93,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReturnTwo()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return two", ((string[])(null)));
-#line 11
+#line 17
 this.ScenarioSetup(scenarioInfo);
-#line 12
+#line 18
  testRunner.Given("I have an integer value of 2");
-#line 13
+#line 19
  testRunner.When("I get the text");
-#line 14
+#line 20
  testRunner.Then("the result should be two");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -93,13 +110,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReturnThree()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return three", ((string[])(null)));
-#line 16
+#line 22
 this.ScenarioSetup(scenarioInfo);
-#line 17
+#line 23
  testRunner.Given("I have an integer value of 3");
-#line 18
+#line 24
  testRunner.When("I get the text");
-#line 19
+#line 25
  testRunner.Then("the result should be three");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -110,13 +127,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReturnFour()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return four", ((string[])(null)));
-#line 21
+#line 27
 this.ScenarioSetup(scenarioInfo);
-#line 22
+#line 28
  testRunner.Given("I have an integer value of 4");
-#line 23
+#line 29
  testRunner.When("I get the text");
-#line 24
+#line 30
  testRunner.Then("the result should be four");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -127,13 +144,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReturnFive()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return five", ((string[])(null)));
-#line 26
+#line 32
 this.ScenarioSetup(scenarioInfo);
-#line 27
+#line 33
  testRunner.Given("I have an integer value of 5");
-#line 28
+#line 34
  testRunner.When("I get the text");
-#line 29
+#line 35
  testRunner.Then("the result should be five");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -144,13 +161,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReturnSix()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return six", ((string[])(null)));
-#line 31
+#line 37
 this.ScenarioSetup(scenarioInfo);
-#line 32
+#line 38
  testRunner.Given("I have an integer value of 6");
-#line 33
+#line 39
  testRunner.When("I get the text");
-#line 34
+#line 40
  testRunner.Then("the result should be six");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -161,13 +178,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReturnSeven()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return seven", ((string[])(null)));
-#line 36
+#line 42
 this.ScenarioSetup(scenarioInfo);
-#line 37
+#line 43
  testRunner.Given("I have an integer value of 7");
-#line 38
+#line 44
  testRunner.When("I get the text");
-#line 39
+#line 45
  testRunner.Then("the result should be seven");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -178,13 +195,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReturnEight()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return eight", ((string[])(null)));
-#line 41
+#line 47
 this.ScenarioSetup(scenarioInfo);
-#line 42
+#line 48
  testRunner.Given("I have an integer value of 8");
-#line 43
+#line 49
  testRunner.When("I get the text");
-#line 44
+#line 50
  testRunner.Then("the result should be eight");
 #line hidden
             testRunner.CollectScenarioErrors();
@@ -195,13 +212,13 @@ this.ScenarioSetup(scenarioInfo);
         public virtual void ReturnNine()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Return nine", ((string[])(null)));
-#line 46
+#line 52
 this.ScenarioSetup(scenarioInfo);
-#line 47
+#line 53
  testRunner.Given("I have an integer value of 9");
-#line 48
+#line 54
  testRunner.When("I get the text");
-#line 49
+#line 55
  testRunner.Then("the result should be nine");
 #line hidden
             testRunner.CollectScenarioErrors();
