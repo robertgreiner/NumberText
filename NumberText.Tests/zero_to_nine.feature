@@ -3,7 +3,6 @@
 	As a .NET developer
 	I want to be given the actual number value in text form of an integer
 
-
 Scenario: Return zero
 	Given I have an integer value of 0
 	When I get the text

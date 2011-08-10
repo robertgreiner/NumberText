@@ -47,6 +47,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ten_to_nineteen.feature</DependentUpon>
     </Compile>
+    <Compile Include="twenty_to_ninetynine.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>twenty_to_ninetynine.feature</DependentUpon>
+    </Compile>
     <Compile Include="zero_to_nine.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -59,6 +64,10 @@
     <None Include="ten_to_nineteen.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>ten_to_nineteen.feature.cs</LastGenOutput>
+    </None>
+    <None Include="twenty_to_ninetynine.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>twenty_to_ninetynine.feature.cs</LastGenOutput>
     </None>
     <None Include="zero_to_nine.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
