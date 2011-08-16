@@ -18,8 +18,8 @@ namespace NumberText.Tests
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.6.1.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("ten to nineteen")]
-    public partial class TenToNineteenFeature
+    [NUnit.Framework.DescriptionAttribute("ten_to_nineteen")]
+    public partial class Ten_To_NineteenFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -31,7 +31,7 @@ namespace NumberText.Tests
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ten to nineteen", "In order to display numbers in a user-friendly fashion\r\nAs a .NET developer\r\nI wa" +
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "ten_to_nineteen", "In order to display numbers in a user-friendly fashion\r\nAs a .NET developer\r\nI wa" +
                     "nt to be given the actual number value in text form of an integer", GenerationTargetLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }

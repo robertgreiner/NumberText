@@ -1,4 +1,4 @@
-﻿Feature: ten to nineteen
+﻿Feature: ten_to_nineteen
 	In order to display numbers in a user-friendly fashion
 	As a .NET developer
 	I want to be given the actual number value in text form of an integer

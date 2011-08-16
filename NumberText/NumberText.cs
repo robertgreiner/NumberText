@@ -15,8 +15,23 @@ namespace NumberText {
         //TODO make this an extension method for the Integer object?
         public string ToText(int num) {
             var builder = new StringBuilder();
-            builder.Append(textStrings[num]);
-            return builder.ToString();
+
+            if (num == 0) {
+                builder.Append(textStrings[num]);
+                return builder.ToString();
+            }
+
+            if (num > 20) {
+                var tens = ((int) (num/10))*10;
+                builder.AppendFormat("{0} ", textStrings[tens]);
+                num = num - tens;
+            }
+
+            if (num > 0) {
+                builder.Append(textStrings[num]);
+            }
+
+            return builder.ToString().Trim();
         }
 
         private void Initialize() {
@@ -42,7 +57,7 @@ namespace NumberText {
             textStrings.Add(19, "nineteen");
             textStrings.Add(20, "twenty");
             textStrings.Add(30, "thirty");
-            textStrings.Add(40, "fourty");
+            textStrings.Add(40, "forty");
             textStrings.Add(50, "fifty");
             textStrings.Add(60, "sixty");
             textStrings.Add(70, "seventy");
