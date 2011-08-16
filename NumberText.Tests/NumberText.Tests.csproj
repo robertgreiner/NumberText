@@ -41,37 +41,37 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="hundreds.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>hundreds.feature</DependentUpon>
+    </Compile>
     <Compile Include="IntToText.cs" />
-    <Compile Include="ten_to_nineteen.feature.cs">
+    <Compile Include="tens.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ten_to_nineteen.feature</DependentUpon>
+      <DependentUpon>tens.feature</DependentUpon>
     </Compile>
-    <Compile Include="twenty_to_ninetynine.feature.cs">
+    <Compile Include="units.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>twenty_to_ninetynine.feature</DependentUpon>
-    </Compile>
-    <Compile Include="zero_to_nine.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>zero_to_nine.feature</DependentUpon>
+      <DependentUpon>units.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ten_to_nineteen.feature">
+    <None Include="hundreds.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>ten_to_nineteen.feature.cs</LastGenOutput>
+      <LastGenOutput>hundreds.feature.cs</LastGenOutput>
     </None>
-    <None Include="twenty_to_ninetynine.feature">
+    <None Include="tens.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>twenty_to_ninetynine.feature.cs</LastGenOutput>
+      <LastGenOutput>tens.feature.cs</LastGenOutput>
     </None>
-    <None Include="zero_to_nine.feature">
+    <None Include="units.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>zero_to_nine.feature.cs</LastGenOutput>
+      <LastGenOutput>units.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>

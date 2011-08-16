@@ -21,8 +21,14 @@ namespace NumberText {
                 return builder.ToString();
             }
 
+            if (num > 99) {
+                var hundreds = ((int) (num / 100));
+                builder.AppendFormat("{0} hundred ", textStrings[hundreds]);
+                num = num - (hundreds * 100); 
+            }
+
             if (num > 20) {
-                var tens = ((int) (num/10))*10;
+                var tens = ((int) (num / 10)) * 10;
                 builder.AppendFormat("{0} ", textStrings[tens]);
                 num = num - tens;
             }
