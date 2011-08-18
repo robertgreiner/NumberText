@@ -47,10 +47,20 @@
       <DependentUpon>hundreds.feature</DependentUpon>
     </Compile>
     <Compile Include="IntToText.cs" />
+    <Compile Include="millions.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>millions.feature</DependentUpon>
+    </Compile>
     <Compile Include="tens.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>tens.feature</DependentUpon>
+    </Compile>
+    <Compile Include="thousands.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>thousands.feature</DependentUpon>
     </Compile>
     <Compile Include="units.feature.cs">
       <AutoGen>True</AutoGen>
@@ -65,9 +75,17 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>hundreds.feature.cs</LastGenOutput>
     </None>
+    <None Include="millions.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>millions.feature.cs</LastGenOutput>
+    </None>
     <None Include="tens.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>tens.feature.cs</LastGenOutput>
+    </None>
+    <None Include="thousands.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>thousands.feature.cs</LastGenOutput>
     </None>
     <None Include="units.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

@@ -7,6 +7,7 @@ namespace NumberText {
     public class NumberText {
 
         private Dictionary<int, string> textStrings = new Dictionary<int, string>();
+        private StringBuilder builder;
 
         public NumberText() {
             Initialize();
@@ -14,30 +15,57 @@ namespace NumberText {
 
         //TODO make this an extension method for the Integer object?
         public string ToText(int num) {
-            var builder = new StringBuilder();
+            builder = new StringBuilder();
 
             if (num == 0) {
                 builder.Append(textStrings[num]);
                 return builder.ToString();
             }
 
-            if (num > 99) {
-                var hundreds = ((int) (num / 100));
-                builder.AppendFormat("{0} hundred ", textStrings[hundreds]);
-                num = num - (hundreds * 100); 
-            }
+            num = AppendMillions(num);
 
+            num = AppendThousands(num);
+
+            Append(num);
+
+            return builder.ToString().Trim();
+        }
+
+        private int AppendMillions(int num) {
+            if (num > 999999) {
+                var millions = ((int)(num / 1000000));
+                Append(millions);
+                builder.AppendFormat("million ");
+                num = num - (millions * 1000000);
+            }
+            return num;
+        }
+
+        private int AppendThousands(int num) {
+            if (num > 999) {
+                var thousands = ((int) (num/1000));
+                Append(thousands);
+                builder.AppendFormat("thousand ");
+                num = num - (thousands*1000);
+            }
+            return num;
+        }
+
+        private int Append(int num) {
+            if (num > 99) {
+                var hundreds = ((int) (num/100));
+                builder.AppendFormat("{0} hundred ", textStrings[hundreds]);
+                num = num - (hundreds*100);
+            }
             if (num > 20) {
-                var tens = ((int) (num / 10)) * 10;
+                var tens = ((int)(num / 10)) * 10;
                 builder.AppendFormat("{0} ", textStrings[tens]);
                 num = num - tens;
             }
-
             if (num > 0) {
-                builder.Append(textStrings[num]);
+                builder.AppendFormat("{0} ",textStrings[num]);
             }
-
-            return builder.ToString().Trim();
+            return num;
         }
 
         private void Initialize() {
@@ -69,6 +97,8 @@ namespace NumberText {
             textStrings.Add(70, "seventy");
             textStrings.Add(80, "eighty");
             textStrings.Add(90, "ninety");
+            textStrings.Add(100, "hundred");
+            textStrings.Add(1000, "thousand");
         }
     }
 }
