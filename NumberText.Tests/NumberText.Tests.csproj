@@ -41,6 +41,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="billions.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>billions.feature</DependentUpon>
+    </Compile>
     <Compile Include="hundreds.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,6 +76,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="billions.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>billions.feature.cs</LastGenOutput>
+    </None>
     <None Include="hundreds.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>hundreds.feature.cs</LastGenOutput>

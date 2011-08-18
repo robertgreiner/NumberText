@@ -22,13 +22,22 @@ namespace NumberText {
                 return builder.ToString();
             }
 
+            num = AppendBillions(num);
             num = AppendMillions(num);
-
             num = AppendThousands(num);
-
             Append(num);
 
             return builder.ToString().Trim();
+        }
+
+        private int AppendBillions(int num) {
+            if (num > 999999999) {
+                var millions = ((int)(num / 1000000000));
+                Append(millions);
+                builder.AppendFormat("billion ");
+                num = num - (millions * 1000000000);
+            }
+            return num;
         }
 
         private int AppendMillions(int num) {
