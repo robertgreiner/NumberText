@@ -7,10 +7,9 @@ using TechTalk.SpecFlow;
 
 namespace NumberText.Tests {
     [Binding]
-    public class IntToText {
+    public class IntToTextSteps {
 
         private int testNumber;
-        NumberText nt = new NumberText();
         private string result = "";
 
         [Given("I have an integer value of (.*)")]
@@ -20,7 +19,7 @@ namespace NumberText.Tests {
 
         [When("I get the text")]
         public void WhenIGetTheText() {
-            result = nt.ToText(testNumber);
+            result = testNumber.ToText();
         }
 
         [Then("the result should be (.*)")]

@@ -51,7 +51,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>hundreds.feature</DependentUpon>
     </Compile>
-    <Compile Include="IntToText.cs" />
+    <Compile Include="IntToTextSteps.cs" />
     <Compile Include="millions.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

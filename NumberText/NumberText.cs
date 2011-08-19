@@ -4,9 +4,18 @@ using System.Linq;
 using System.Text;
 
 namespace NumberText {
+
+    public static class NumberTextExtensionMethod {
+        public static string ToText(this int num) {
+            var numberText = new NumberText();
+            return numberText.ToText(num);
+        }
+    }
+
     public class NumberText {
 
         private Dictionary<int, string> textStrings = new Dictionary<int, string>();
+        private Dictionary<int, string> scales = new Dictionary<int, string>(); 
         private StringBuilder builder;
 
         public NumberText() {
@@ -22,57 +31,49 @@ namespace NumberText {
                 return builder.ToString();
             }
 
-            num = AppendBillions(num);
-            num = AppendMillions(num);
-            num = AppendThousands(num);
-            Append(num);
+            num = scales.Aggregate(num, (current, scale) => Append(current, scale.Key));
+            AppendPrefixForScale(num);
 
             return builder.ToString().Trim();
         }
 
-        private int AppendBillions(int num) {
-            if (num > 999999999) {
-                var millions = ((int)(num / 1000000000));
-                Append(millions);
-                builder.AppendFormat("billion ");
-                num = num - (millions * 1000000000);
+        private int Append(int num, int scale) {
+            if (num > scale - 1) {
+                var baseScale = ((int)(num / scale));
+                AppendPrefixForScale(baseScale);
+                builder.AppendFormat("{0} ", scales[scale]);
+                num = num - (baseScale * scale);
             }
             return num;
         }
 
-        private int AppendMillions(int num) {
-            if (num > 999999) {
-                var millions = ((int)(num / 1000000));
-                Append(millions);
-                builder.AppendFormat("million ");
-                num = num - (millions * 1000000);
+        private int AppendPrefixForScale(int num) {
+            num = AppendHundreds(num);
+            num = AppendTens(num);
+            AppendUnits(num);
+            return num;
+        }
+
+        private void AppendUnits(int num) {
+            if (num > 0) {
+                builder.AppendFormat("{0} ", textStrings[num]);
+            }
+        }
+
+        private int AppendTens(int num) {
+            if (num > 20) {
+                var tens = ((int) (num/10))*10;
+                builder.AppendFormat("{0} ", textStrings[tens]);
+                num = num - tens;
             }
             return num;
         }
 
-        private int AppendThousands(int num) {
-            if (num > 999) {
-                var thousands = ((int) (num/1000));
-                Append(thousands);
-                builder.AppendFormat("thousand ");
-                num = num - (thousands*1000);
-            }
-            return num;
-        }
-
-        private int Append(int num) {
+        private int AppendHundreds(int num) {
             if (num > 99) {
                 var hundreds = ((int) (num/100));
                 builder.AppendFormat("{0} hundred ", textStrings[hundreds]);
                 num = num - (hundreds*100);
-            }
-            if (num > 20) {
-                var tens = ((int)(num / 10)) * 10;
-                builder.AppendFormat("{0} ", textStrings[tens]);
-                num = num - tens;
-            }
-            if (num > 0) {
-                builder.AppendFormat("{0} ",textStrings[num]);
             }
             return num;
         }
@@ -107,7 +108,10 @@ namespace NumberText {
             textStrings.Add(80, "eighty");
             textStrings.Add(90, "ninety");
             textStrings.Add(100, "hundred");
-            textStrings.Add(1000, "thousand");
+
+            scales.Add(1000000000, "billion");
+            scales.Add(1000000, "million");
+            scales.Add(1000, "thousand");
         }
     }
 }
