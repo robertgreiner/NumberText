@@ -22,7 +22,6 @@ namespace NumberText {
             Initialize();
         }
 
-        //TODO make this an extension method for the Integer object?
         public string ToText(int num) {
             builder = new StringBuilder();
 
