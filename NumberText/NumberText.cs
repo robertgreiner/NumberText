@@ -31,7 +31,7 @@ namespace NumberText {
             }
 
             num = scales.Aggregate(num, (current, scale) => Append(current, scale.Key));
-            AppendPrefixForScale(num);
+            AppendLessThanOneThousand(num);
 
             return builder.ToString().Trim();
         }
@@ -39,14 +39,14 @@ namespace NumberText {
         private int Append(int num, int scale) {
             if (num > scale - 1) {
                 var baseScale = ((int)(num / scale));
-                AppendPrefixForScale(baseScale);
+                AppendLessThanOneThousand(baseScale);
                 builder.AppendFormat("{0} ", scales[scale]);
                 num = num - (baseScale * scale);
             }
             return num;
         }
 
-        private int AppendPrefixForScale(int num) {
+        private int AppendLessThanOneThousand(int num) {
             num = AppendHundreds(num);
             num = AppendTens(num);
             AppendUnits(num);
