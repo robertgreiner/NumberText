@@ -7,9 +7,9 @@ using NumberText;
 namespace UsageExample {
     class Program {
         static void Main(string[] args) {
-            int testNumber = 1234567;
-            Console.WriteLine(testNumber.ToText());
-            Console.WriteLine(98765.ToText());
+            Console.Write("Enter Number: ");
+            var input = Console.ReadLine();
+            Console.WriteLine(Convert.ToInt32(input).ToText());
             Console.ReadKey();
         }
     }
